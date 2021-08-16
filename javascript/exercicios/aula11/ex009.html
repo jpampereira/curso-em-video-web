@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nacionalidade</title>
+
+    <style>
+        strong {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Onde você mora?</h1>
+    <input type="text" name="txtpais" id="txtpais">
+    <input type="button" value="Nacionalidade" onclick="acao()">
+    <div id="res"></div>
+
+    <script>
+        function acao() {
+            var país = window.document.querySelector('input#txtpais').value
+            var res = window.document.querySelector('div#res')
+
+            res.innerHTML = `Você mora em <strong>${país}</strong>, logo você é `
+            if(país == 'Brasil') {
+                res.innerHTML += `<strong>Brasileiro</strong>.`
+            } else {
+                res.innerHTML += `<strong>Estrangeiro</strong>.`
+            }
+        }
+    </script>
+</body>
+</html>
